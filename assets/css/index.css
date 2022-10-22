@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: poke;
+    src: url('../fonts/Pokemon\ Hollow.ttf');
+}
+body{
+    background-color: #000c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1500px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    font-family: poke;
+    color: #ffe600;    
+    text-shadow: 
+    -1px -1px 3px #3569af, 
+    -1px 1px 3px #3569af,                    
+     1px -1px 3px #3569af,                  
+     1px 0px 3px #3569af;
+     
+}
+
+
+
+.poke-img{    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+}
+.poke-img img{
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}      
+.parte-boneco{
+    background-color: #000c2c; /*#000c2c*/
+    position: absolute;
+
+}
+.cabeca{
+    width: 95px;
+    height: 75px;
+    top: 20px;
+    left: 75px;
+}
+.dorso{       
+    width: 75px;
+    height: 100px;
+    top: 95px;
+    left: 80px; 
+}
+.braco-esquerdo{            
+    width: 75px;
+    height: 100px;
+    top: 87px;
+    left: 5px;             
+}
+.braco-direito{           
+    width: 75px;
+    height: 100px;
+    top: 95px;
+    right: 20px; 
+}
+.perna-direita{               
+    width: 125px;
+    height: 165px;
+    bottom: 20px;
+    right: 0px; 
+}
+.perna-esquerda{             
+    width: 125px;
+    height: 165px;
+    bottom: 20px;
+    left: 0px; 
+}
+.pokebola-letra{
+    width: 30px;
+}        
+.palavra .palavraMesmo{
+    font-family: poke;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.mostrarimg {
+    background-color: transparent;
+    transition: 0.5s;
+}  
+button {
+    font-family: poke;
+    font-size: 20px;
+    padding: 0px 20px;
+    background-color: #ff0000;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.bg-color{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: calc(100vw - 17px);
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.cardWin{
+    background-color: #3569af;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.9s;
+}
+.cardWin .cardWin-foto,
+.cardWin .cardWin-desc{
+    background-color: #eef3f8;   
+    width: calc(100% - 30px);
+    margin-top: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardWin .cardWin-foto {
+    flex: 2;
+}
+.cardWin .cardWin-foto .cardWin-fotoPoke{
+    height: 250px;
+    width: 98%;
+}
+.cardWin .cardWin-desc {
+    margin-bottom: 15px;
+    flex: 1;
+}
+.cardWin .cardWin-desc--txt {
+    margin: 10px;
+}
