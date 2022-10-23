@@ -114,8 +114,9 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/* #restart{
-} */
+#restart{
+    display: none;
+}
 
 
 .bg-color{

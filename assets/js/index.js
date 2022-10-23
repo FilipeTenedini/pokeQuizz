@@ -6,6 +6,7 @@ let pokes = {
     'raichu': {nome: 'RAICHU', classe: 'raio', img: './assets/images/raichu.png', desc: 'Ele é a forma evoluída de Pikachu e a forma final de Pichu.'}    
 };
 
+
 function defPoke() {
     let pokefoto = document.querySelector('.cardWin-fotoPoke');
     let poketxt = document.querySelector('.cardWin-desc--txt');
@@ -35,6 +36,11 @@ let palavra = pokeEscolhido.nome;
 let chutesRealizados = [];
 let erros = 0;
 let errosMax = boneco.length;
+let botaoPlay = document.querySelector('#play')
+let botaoRestart = document.querySelector('#restart')
+let cardWin = document.querySelector('.cardWin');
+let cardLose = document.querySelector('.cardLose');
+
 mostrarPalavra();
 
 
@@ -55,9 +61,6 @@ function mostrarPalavra() {
 };
 
 function restart() {
-    let botaoPlay = document.querySelector('#play')
-    let botaoRestart = document.querySelector('#restart')
-//CRIAR UM IF PARA TROCAR DE UM BOTÃO PARA OUTRO
     botaoPlay.style.display='none';
     botaoRestart.style.display='flex';
 }
@@ -66,16 +69,15 @@ function ganhaOuperde(){
     let mostrarPoke = (div) => div.style.display='flex';
 
     if (palavraMisterio.innerHTML === palavra){        
-        let cardWin = document.querySelector('.cardWin');
         mostrarPoke(card);
         mostrarPoke(cardWin);
         restart();
     }
     
     if (erros === errosMax) {
-        let cardLose = document.querySelector('.cardLose');
         mostrarPoke(card);
         mostrarPoke(cardLose);
+        restart();
     }
 };
 
@@ -98,7 +100,13 @@ function chutarLetra() {
     ganhaOuperde();
 };
 
-let fecharCard = () => card.style.display='none';
+function fecharCard(){    
+    card.style.display='none';
+    let escondePoke = (div) => div.style.display='none';
+
+    escondePoke(cardWin)
+    escondePoke(cardLose)
+}
 
 function restartGame() {
     let boneco = Array.from(document.querySelectorAll('.parte-boneco'));    
@@ -111,4 +119,6 @@ function restartGame() {
     pokeEscolhido = defPoke();
     palavra = pokeEscolhido.nome
     mostrarPalavra();
+    botaoPlay.style.display='flex';
+    botaoRestart.style.display='none';
 };
