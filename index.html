@@ -26,22 +26,26 @@
             <div class="palavraMesmo">         
             </div>
         </div>
-        <button onclick="chutarLetra()">JOGAR</button>
-    </main>
-    <div class="bg-color">
+        <button onclick="chutarLetra()" id="play">JOGAR</button>
+        <button onclick="restartGame()" id="restart">RESTART</button>
+        
+    
+
+    <div class="bg-color" onclick="fecharCard()">
         <div class="cardWin">
             <div class="cardWin-foto">
                 <img src="./assets/images/charmander.png" alt="" class="cardWin-fotoPoke">
             </div>
             <div class="cardWin-desc">
-                <div class="cardWin-desc--txt">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, nesciunt! Excepturi perspiciatis numquam quis natus sint fugiat, reiciendis laborum soluta, inventore cupiditate non suscipit corrupti rem ipsa reprehenderit autem quam?
-                </div>            
+                <div class="cardWin-desc--txt"></div>            
             </div>
         </div>
+        <div class="cardLose">
+            <p>Você perdeu!</p>
+            <img src="./assets/images/gastly.png" alt="">
+        </div>
     </div>
-
-
+</main>
 
 
 
