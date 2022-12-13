@@ -9,7 +9,7 @@
 </p>
 
 - Link para aplicação:
-  - <a href="https://filipetenedini.github.io/pokeQuizz/'> Clique aqui! </a>
+  - <a href="https://filipetenedini.github.io/pokeQuizz/"> Clique aqui! </a>
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
